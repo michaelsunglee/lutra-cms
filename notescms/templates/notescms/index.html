@@ -1,0 +1,14 @@
+{% if notes_list %}
+    <table>
+        <tr>
+            <th>Field 1</th>
+            <th>Field 2</th>
+        </tr>
+        {% for item in notes_list %}
+        <tr>
+            <td>{{ item.source_title }}</td>
+            <td>{{ item.author }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
