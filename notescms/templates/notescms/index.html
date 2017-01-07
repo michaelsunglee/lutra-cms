@@ -1,13 +1,19 @@
 {% if notes_list %}
     <table>
         <tr>
-            <th>Field 1</th>
-            <th>Field 2</th>
+            <th>Source Title</th>
+            <th>Author</th>
+            <th>Note</th>
+            <th>Page Number</th>
+            <th>Date Added</th>
         </tr>
         {% for item in notes_list %}
         <tr>
             <td>{{ item.source_title }}</td>
             <td>{{ item.author }}</td>
+            <td>{{ item.note }}</td>
+            <td>{{ item.page_number }}</td>
+            <td>{{ item.date }}</td>
         </tr>
         {% endfor %}
     </table>
