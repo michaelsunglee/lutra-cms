@@ -1,20 +1,14 @@
-{% if notes_list %}
-    <table>
-        <tr>
-            <th>Source Title</th>
-            <th>Author</th>
-            <th>Note</th>
-            <th>Page Number</th>
-            <th>Date Added</th>
-        </tr>
-        {% for item in notes_list %}
-        <tr>
-            <td>{{ item.source_title }}</td>
-            <td>{{ item.author }}</td>
-            <td>{{ item.note }}</td>
-            <td>{{ item.page_number }}</td>
-            <td>{{ item.date }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+{# test #}
+{% if notes_table %}
+{% load render_table from django_tables2 %}
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+    </head>
+    <body>
+    {% render_table notes_table %}
+    </body>
+</html>
 {% endif %}
